@@ -1,0 +1,268 @@
+# Define Customer Class
+class Customer:
+    def __init__(self, name, email, phoneNumber, address):
+        self.name = name
+        self.email = email
+        self.phoneNumber = phoneNumber
+        self.address = address
+        self.reservations = []  # List to store reservations made by the customer
+
+    # Getter and Setter methods for attributes
+    def get_name(self):
+        return self.name
+
+    def set_name(self, name):
+        self.name = name
+
+    def get_email(self):
+        return self.email
+
+    def set_email(self, email):
+        self.email = email
+
+    def get_phoneNumber(self):
+        return self.phoneNumber
+
+    def set_phoneNumber(self, phoneNumber):
+        self.phoneNumber = phoneNumber
+
+    def get_address(self):
+        return self.address
+
+    def set_address(self, address):
+        self.address = address
+
+    def makeReservation(self, reservation):
+        """Method to make a reservation"""
+        self.reservations.append(reservation)
+
+    def cancelReservation(self):
+        """Method to cancel a reservation"""
+        pass  # Implement logic to cancel a reservation
+
+    def makePayment(self):
+        """Method to handle payment process"""
+        pass  # Implement payment processing logic
+
+    def checkIn(self):
+        """Method to check in the customer"""
+        pass  # Implement check-in logic
+
+    def checkOut(self):
+        """Method to check out the customer"""
+        pass  # Implement check-out logic
+
+
+# Define Reservation Class
+class Reservation:
+    def __init__(self, reservationID, roomType, checkInDate, checkOutDate, status):
+        self.reservationID = reservationID
+        self.roomType = roomType
+        self.checkInDate = checkInDate
+        self.checkOutDate = checkOutDate
+        self.status = status
+        self.payment = None  # Attribute to store payment object related to reservation
+
+    # Getter and Setter methods for attributes
+    def get_reservationID(self):
+        return self.reservationID
+
+    def set_reservationID(self, reservationID):
+        self.reservationID = reservationID
+
+    def get_roomType(self):
+        return self.roomType
+
+    def set_roomType(self, roomType):
+        self.roomType = roomType
+
+    def get_checkInDate(self):
+        return self.checkInDate
+
+    def set_checkInDate(self, checkInDate):
+        self.checkInDate = checkInDate
+
+    def get_checkOutDate(self):
+        return self.checkOutDate
+
+    def set_checkOutDate(self, checkOutDate):
+        self.checkOutDate = checkOutDate
+
+    def get_status(self):
+        return self.status
+
+    def set_status(self, status):
+        self.status = status
+
+    def confirmReservation(self):
+        """Method to confirm reservation"""
+        pass  # Logic to confirm reservation
+
+    def cancelReservation(self):
+        """Method to cancel reservation"""
+        pass  # Logic to cancel reservation
+
+    def modifyReservation(self):
+        """Method to modify reservation details"""
+        pass  # Logic to modify reservation details
+
+
+# Define Payment Class
+class Payment:
+    def __init__(self, paymentID, amount, paymentMethod, paymentStatus):
+        self.paymentID = paymentID
+        self.amount = amount
+        self.paymentMethod = paymentMethod
+        self.paymentStatus = paymentStatus
+
+    # Getter and Setter methods for attributes
+    def get_paymentID(self):
+        return self.paymentID
+
+    def set_paymentID(self, paymentID):
+        self.paymentID = paymentID
+
+    def get_amount(self):
+        return self.amount
+
+    def set_amount(self, amount):
+        self.amount = amount
+
+    def get_paymentMethod(self):
+        return self.paymentMethod
+
+    def set_paymentMethod(self, paymentMethod):
+        self.paymentMethod = paymentMethod
+
+    def get_paymentStatus(self):
+        return self.paymentStatus
+
+    def set_paymentStatus(self, paymentStatus):
+        self.paymentStatus = paymentStatus
+
+    def processPayment(self):
+        """Method to process payment"""
+        pass  # Logic to process payment
+
+    def refundPayment(self):
+        """Method to process refund"""
+        pass  # Logic to handle refund
+
+
+# Define Room Class
+class Room:
+    def __init__(self, roomNumber, roomType, price, availability):
+        self.roomNumber = roomNumber
+        self.roomType = roomType
+        self.price = price
+        self.availability = availability
+
+    # Getter and Setter methods for attributes
+    def get_roomNumber(self):
+        return self.roomNumber
+
+    def set_roomNumber(self, roomNumber):
+        self.roomNumber = roomNumber
+
+    def get_roomType(self):
+        return self.roomType
+
+    def set_roomType(self, roomType):
+        self.roomType = roomType
+
+    def get_price(self):
+        return self.price
+
+    def set_price(self, price):
+        self.price = price
+
+    def is_available(self):
+        return self.availability
+
+    def set_availability(self, availability):
+        self.availability = availability
+
+    def checkAvailability(self):
+        """Method to check room availability"""
+        pass  # Logic to check room availability
+
+    def assignRoom(self):
+        """Method to assign room to a reservation"""
+        pass  # Logic to assign room
+
+    def updateRoomStatus(self):
+        """Method to update room status"""
+        pass  # Logic to update room status
+
+
+# Define Hotel System Class
+class HotelSystem:
+    def __init__(self, systemID, systemName, totalRooms):
+        self.systemID = systemID
+        self.systemName = systemName
+        self.totalRooms = totalRooms
+        self.reservations = []
+
+    # Getter and Setter methods for attributes
+    def get_systemID(self):
+        return self.systemID
+
+    def set_systemID(self, systemID):
+        self.systemID = systemID
+
+    def get_systemName(self):
+        return self.systemName
+
+    def set_systemName(self, systemName):
+        self.systemName = systemName
+
+    def get_totalRooms(self):
+        return self.totalRooms
+
+    def set_totalRooms(self, totalRooms):
+        self.totalRooms = totalRooms
+
+    def manageReservation(self):
+        """Method to manage reservations"""
+        pass  # Logic to manage reservations
+
+    def managePayment(self):
+        """Method to manage payments"""
+        pass  # Logic to manage payments
+
+    def manageRoomAssignment(self):
+        """Method to manage room assignments"""
+        pass  # Logic to manage room assignment
+
+    def generateReports(self):
+        """Method to generate reports"""
+        pass  # Logic to generate reports
+
+
+# Creating Objects and Populating Data
+
+# Create Customer object
+customer1 = Customer("Rouda", "rouda@example.com", "1234567890", "123 Main St")
+
+# Create Room object
+room1 = Room(101, "Deluxe", 150.0, True)
+
+# Create Reservation object
+reservation1 = Reservation(1, room1.roomType, "2024-10-01", "2024-10-05", "Confirmed")
+
+# Assign Reservation to Customer
+customer1.makeReservation(reservation1)
+
+# Create Payment object and assign it to the reservation
+payment1 = Payment(1, 150.0, "Credit Card", "Completed")
+reservation1.payment = payment1
+
+# Create Hotel System object
+hotel_system = HotelSystem(1, "Luxury Stay Hotel", 100)
+
+# Display Information
+print(f"Customer Name: {customer1.get_name()}")
+print(f"Reservation ID: {reservation1.get_reservationID()}")
+print(f"Room Type: {reservation1.get_roomType()}")
+print(f"Check-In Date: {reservation1.get_checkInDate()}")
+print(f"Payment Status: {reservation1.payment.get_paymentStatus()}")
